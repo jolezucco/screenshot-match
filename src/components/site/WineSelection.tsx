@@ -16,7 +16,7 @@ const styleNames: Record<CardStyle, string> = {
   pietra: "Pietra",
   cerchio: "Cerchio",
 };
-const SHOW_STYLE_CAPTIONS = true;
+const SHOW_STYLE_CAPTIONS = false;
 
 export function WineSelection() {
   const { t } = useLanguage();
