@@ -17,7 +17,7 @@
 | Indirizzo | `src/config/site.ts` → `address` |
 | Link Google Maps | `src/config/site.ts` → `googleMapsUrl` (pulsante) e `googleMapsEmbedUrl` (mappa) |
 | Partita IVA, Privacy, Cookie | `src/config/site.ts` → `legal` |
-| Favicon | `public/favicon.svg` e `public/favicon.ico` |
+| Favicon | `public/favicon.ico`, `public/favicon-16x16.png`, `public/favicon-32x32.png`, `public/apple-touch-icon.png` (generati dal logo `public/images/loghi/logo-carcioffi.png`) |
 | Tutti gli altri testi (IT/EN) | `src/i18n/translations.ts` |
 
 Sostituendo un file con lo **stesso nome** non serve toccare il codice.
