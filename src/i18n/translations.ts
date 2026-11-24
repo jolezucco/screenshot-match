@@ -26,7 +26,7 @@ export const translations = {
       // TESTO FORNITO DA ALE — titolo
       title: "Titolo",
       // TESTO FORNITO DA ALE — testo
-      body: "Il testo racconterà la storia dell’azienda, il legame con il territorio, la produzione e la filosofia alla base della selezione dei vini.",
+      body: "Descrizione che ci manderai!🤙🤙",
     },
     wines: {
       eyebrow: "I vini",
