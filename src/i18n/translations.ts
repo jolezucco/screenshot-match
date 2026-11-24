@@ -1,0 +1,120 @@
+/**
+ * ============================================================
+ *  TESTI DEL SITO (IT / EN)
+ * ============================================================
+ * Qui trovi tutti i testi visibili. Modifica le stringhe mantenendo le chiavi.
+ * Il "TESTO FORNITO DA ALE" va in about.title e about.body.
+ */
+
+export type Lang = "it" | "en";
+
+export const translations = {
+  it: {
+    langLabel: "Seleziona la lingua",
+    tagline: "Vendita vini",
+    hero: {
+      eyebrow: "Carcioffi · Vendita vini",
+      title: "Vini autentici del territorio",
+      cta: "Scopri i nostri vini",
+      scrollHint: "Scorri verso il basso",
+      imageAlt: "Filari di vigna sulle colline al tramonto",
+    },
+    about: {
+      eyebrow: "La nostra storia",
+      // TESTO FORNITO DA ALE — titolo
+      title: "Titolo",
+      // TESTO FORNITO DA ALE — testo
+      body: "Il testo racconterà la storia dell’azienda, il legame con il territorio, la produzione e la filosofia alla base della selezione dei vini.",
+    },
+    wines: {
+      eyebrow: "I vini",
+      title: "La nostra selezione",
+      subtitle: "Otto vini, otto espressioni del nostro territorio.",
+      types: { rosso: "Rosso", bianco: "Bianco", rosato: "Rosato", passito: "Passito" },
+      styleNote: "Proposta stile",
+    },
+    catalog: {
+      title: "Il catalogo completo",
+      text: "Schede, abbinamenti e annate di tutti i nostri vini, in un unico documento.",
+      cta: "Scarica il catalogo PDF",
+      meta: "PDF",
+    },
+    contact: {
+      eyebrow: "Contatti",
+      title: "Vieni a trovarci",
+      subtitle: "Contattaci per conoscere i nostri vini o per organizzare una visita.",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      instagram: "Instagram",
+      address: "Indirizzo",
+      openMaps: "Apri in Google Maps",
+      mapTitle: "Mappa con la posizione dell’azienda",
+      imageAlt: "Cortile dell’azienda agricola con botti di legno al tramonto",
+    },
+    footer: {
+      rights: "Vendita Vini. Tutti i diritti riservati.",
+      privacy: "Privacy Policy",
+      cookie: "Cookie Policy",
+      contacts: "Contatti",
+      legal: "Informazioni",
+    },
+    whatsapp: {
+      label: "Contattaci su WhatsApp",
+      message: "Buongiorno, vorrei ricevere maggiori informazioni sui vostri vini.",
+    },
+  },
+  en: {
+    langLabel: "Select language",
+    tagline: "Wine shop",
+    hero: {
+      eyebrow: "Carcioffi · Wine shop",
+      title: "Authentic wines from our land",
+      cta: "Discover our wines",
+      scrollHint: "Scroll down",
+      imageAlt: "Vineyard rows on the hills at sunset",
+    },
+    about: {
+      eyebrow: "Our story",
+      title: "Title",
+      body: "This text will tell the story of the estate, its bond with the land, the way we produce and the philosophy behind our selection of wines.",
+    },
+    wines: {
+      eyebrow: "The wines",
+      title: "Our selection",
+      subtitle: "Eight wines, eight expressions of our land.",
+      types: { rosso: "Red", bianco: "White", rosato: "Rosé", passito: "Passito" },
+      styleNote: "Style option",
+    },
+    catalog: {
+      title: "The full catalogue",
+      text: "Tasting notes, pairings and vintages of all our wines, in a single document.",
+      cta: "Download the PDF catalogue",
+      meta: "PDF",
+    },
+    contact: {
+      eyebrow: "Contact",
+      title: "Come and visit us",
+      subtitle: "Get in touch to discover our wines or to arrange a visit.",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      instagram: "Instagram",
+      address: "Address",
+      openMaps: "Open in Google Maps",
+      mapTitle: "Map showing the estate location",
+      imageAlt: "Farm courtyard with wooden barrels at sunset",
+    },
+    footer: {
+      rights: "Vendita Vini. All rights reserved.",
+      privacy: "Privacy Policy",
+      cookie: "Cookie Policy",
+      contacts: "Contact",
+      legal: "Information",
+    },
+    whatsapp: {
+      label: "Contact us on WhatsApp",
+      message: "Hello, I would like to receive more information about your wines.",
+    },
+  },
+} as const;
+
+export type Dictionary = (typeof translations)[Lang];

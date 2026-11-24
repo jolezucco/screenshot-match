@@ -28,3 +28,10 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All editable site content lives in `src/config/site.ts` (contacts, links, image paths), `src/config/wines.ts` (wine list) and `src/i18n/translations.ts` (IT/EN copy); components only read from them — so placeholders can be swapped without touching components.
+- Images, logos, PDF and fonts are real files in `public/` or `@fontsource` packages, never CDN pointers or remote font links — the site must be exportable to independent hosting.
+- Language (IT/EN) is a client-side React context (`src/i18n/LanguageContext.tsx`), not separate routes — single-page site.
+- `GUIDA-CONTENUTI.md` maps every placeholder to its file; keep it in sync when moving content.
