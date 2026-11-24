@@ -18,12 +18,12 @@ export type WineType = "rosso" | "bianco" | "rosato" | "passito";
 export type CardStyle =
   | "minimal"
   | "catalogo"
-  | "luminoso"
-  | "arco"
-  | "orizzontale"
-  | "etichetta"
-  | "artigianale"
-  | "editoriale";
+  | "lino"
+  | "salvia"
+  | "sabbia"
+  | "nicchia"
+  | "pietra"
+  | "cerchio";
 
 export type Localized = { it: string; en: string };
 
@@ -70,7 +70,7 @@ export const wines: Wine[] = [
     type: "bianco",
     image: bottle("bottiglia-bianco.webp"),
     alt: { it: "Bottiglia di Bianco Perla, vino bianco", en: "Bottle of Bianco Perla, white wine" },
-    cardStyle: "luminoso",
+    cardStyle: "lino",
   },
   {
     id: "carciofino",
@@ -79,7 +79,7 @@ export const wines: Wine[] = [
     type: "bianco",
     image: bottle("bottiglia-bianco.webp"),
     alt: { it: "Bottiglia di Carciofino, vino bianco", en: "Bottle of Carciofino, white wine" },
-    cardStyle: "arco",
+    cardStyle: "salvia",
   },
   {
     id: "robi",
@@ -88,7 +88,7 @@ export const wines: Wine[] = [
     type: "rosato",
     image: bottle("bottiglia-rosato.webp"),
     alt: { it: "Bottiglia di Robi, vino rosato", en: "Bottle of Robi, rosé wine" },
-    cardStyle: "orizzontale",
+    cardStyle: "sabbia",
   },
   {
     id: "generale",
@@ -97,7 +97,7 @@ export const wines: Wine[] = [
     type: "rosso",
     image: bottle("bottiglia-rosso.webp"),
     alt: { it: "Bottiglia di Generale, vino rosso", en: "Bottle of Generale, red wine" },
-    cardStyle: "etichetta",
+    cardStyle: "nicchia",
   },
   {
     id: "punto-fermo",
@@ -106,7 +106,7 @@ export const wines: Wine[] = [
     type: "bianco",
     image: bottle("bottiglia-bianco.webp"),
     alt: { it: "Bottiglia di Punto Fermo, vino bianco", en: "Bottle of Punto Fermo, white wine" },
-    cardStyle: "artigianale",
+    cardStyle: "pietra",
   },
   {
     id: "passito",
@@ -115,6 +115,6 @@ export const wines: Wine[] = [
     type: "passito",
     image: bottle("bottiglia-passito.webp"),
     alt: { it: "Bottiglia di Passito, vino passito", en: "Bottle of Passito, dessert wine" },
-    cardStyle: "editoriale",
+    cardStyle: "cerchio",
   },
 ];

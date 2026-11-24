@@ -86,141 +86,96 @@ function CatalogoCard({ wine, index }: CardProps) {
   );
 }
 
-/* 3 — Luminoso contemporaneo (vetro discreto) */
-function LuminosoCard({ wine }: CardProps) {
+/* 3 — Lino: fondo crema, testo allineato a sinistra */
+function LinoCard({ wine }: CardProps) {
   const { lang } = useLanguage();
   return (
-    <article className={cn(base, "bg-glass-card border border-glass-border shadow-soft")}>
-      <span className="absolute -left-10 top-10 h-40 w-40 rounded-full bg-sage-soft blur-3xl" aria-hidden="true" />
-      <span className="absolute -right-8 bottom-24 h-32 w-32 rounded-full bg-amber-soft blur-3xl" aria-hidden="true" />
-      <Bottle wine={wine} className="absolute inset-x-0 top-6 h-[62%]" imgClassName="bottle-reflection" />
-      <div className="absolute inset-x-4 bottom-4 rounded-xl border border-glass-border bg-glass p-4 shadow-soft backdrop-blur-md">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <h3 className="text-2xl text-foreground">{wine.name}</h3>
-            <p className="mt-0.5 text-sm text-muted-foreground">{wine.subtitle[lang]}</p>
-          </div>
-          <TypeTag wine={wine} className="mt-1 shrink-0 text-vine" />
-        </div>
+    <article className={cn(base, "flex flex-col bg-cream p-6 shadow-soft")}>
+      <Bottle wine={wine} className="h-full flex-1" />
+      <div className="mt-5 border-t border-border pt-4">
+        <TypeTag wine={wine} className="text-muted-foreground" />
+        <h3 className="mt-2 text-3xl text-foreground">{wine.name}</h3>
+        <p className="mt-0.5 text-sm text-muted-foreground">{wine.subtitle[lang]}</p>
       </div>
     </article>
   );
 }
 
-/* 4 — Arco in vigna */
-function ArcoCard({ wine }: CardProps) {
+/* 4 — Salvia: verde tenue, tutto centrato */
+function SalviaCard({ wine }: CardProps) {
   const { lang } = useLanguage();
   return (
-    <article className={cn(base, "flex flex-col items-center bg-sage-soft px-5 pb-6 pt-5 text-center shadow-soft")}>
-      <div className="relative flex min-h-0 w-full flex-1 items-end justify-center overflow-hidden rounded-t-full border border-vine/25 bg-offwhite pt-12">
-        <span className="absolute inset-x-0 bottom-0 h-1/4 bg-mustard/20" aria-hidden="true" />
-        <span className="absolute left-1/2 top-5 h-2 w-2 -translate-x-1/2 rounded-full bg-mustard" aria-hidden="true" />
-        <Bottle
-          wine={wine}
-          className="relative h-[92%] pb-3"
-          imgClassName="drop-shadow-[0_12px_12px_oklch(0.3_0.04_140_/_0.2)]"
-        />
+    <article className={cn(base, "flex flex-col items-center bg-sage-soft/70 px-6 pb-7 pt-8 text-center shadow-soft")}>
+      <Bottle wine={wine} className="h-full flex-1" />
+      <h3 className="mt-5 text-3xl text-vine-deep">{wine.name}</h3>
+      <p className="mt-1 text-sm text-muted-foreground">{wine.subtitle[lang]}</p>
+      <TypeTag wine={wine} className="mt-3 text-vine" />
+    </article>
+  );
+}
+
+/* 5 — Sabbia: bottiglia su fondo beige, testo su bianco */
+function SabbiaCard({ wine }: CardProps) {
+  const { lang } = useLanguage();
+  return (
+    <article className={cn(base, "flex flex-col border border-border/60 bg-card shadow-soft")}>
+      <div className="flex min-h-0 flex-1 bg-beige/45 px-6 pt-8 pb-5">
+        <Bottle wine={wine} className="h-full w-full" />
       </div>
-      <TypeTag wine={wine} className="mt-4 text-vine" />
-      <h3 className="mt-1.5 text-3xl text-vine-deep">{wine.name}</h3>
+      <div className="flex items-end justify-between gap-3 px-6 py-5">
+        <div className="min-w-0">
+          <h3 className="text-3xl text-foreground">{wine.name}</h3>
+          <p className="mt-0.5 text-sm text-muted-foreground">{wine.subtitle[lang]}</p>
+        </div>
+        <TypeTag wine={wine} className="mb-1 shrink-0 text-muted-foreground" />
+      </div>
+    </article>
+  );
+}
+
+/* 6 — Nicchia: bottiglia dentro un arco chiaro, senza decorazioni */
+function NicchiaCard({ wine }: CardProps) {
+  const { lang } = useLanguage();
+  return (
+    <article className={cn(base, "flex flex-col items-center border border-border/60 bg-card px-6 pb-7 pt-6 text-center shadow-soft")}>
+      <div className="flex min-h-0 w-full flex-1 items-end justify-center rounded-t-full bg-cream px-4 pt-10 pb-4">
+        <Bottle wine={wine} className="h-full" />
+      </div>
+      <h3 className="mt-5 text-3xl text-foreground">{wine.name}</h3>
+      <p className="mt-1 text-sm text-muted-foreground">{wine.subtitle[lang]}</p>
+      <TypeTag wine={wine} className="mt-3 text-muted-foreground" />
+    </article>
+  );
+}
+
+/* 7 — Pietra: fondo carta, numero discreto */
+function PietraCard({ wine, index }: CardProps) {
+  const { lang } = useLanguage();
+  return (
+    <article className={cn(base, "flex flex-col bg-paper p-6 shadow-soft")}>
+      <div className="flex items-center justify-between text-muted-foreground">
+        <TypeTag wine={wine} />
+        <span className="font-serif text-lg italic">{num(index)}</span>
+      </div>
+      <Bottle wine={wine} className="mt-3 h-full flex-1" />
+      <h3 className="mt-5 text-3xl text-foreground">{wine.name}</h3>
       <p className="mt-0.5 text-sm text-muted-foreground">{wine.subtitle[lang]}</p>
     </article>
   );
 }
 
-/* 5 — Moderno orizzontale */
-function OrizzontaleCard({ wine, index }: CardProps) {
-  const { lang, t } = useLanguage();
-  return (
-    <article className={cn(base, "bg-horizontal-card grid grid-cols-[44%_1fr] border border-border/60 shadow-soft")}>
-      <div className="relative m-3 mr-0 overflow-hidden rounded-xl bg-sage-soft">
-        <Bottle wine={wine} className="absolute inset-0 py-6" />
-      </div>
-      <div className="flex flex-col justify-center gap-3 p-5">
-        <span className="flex h-11 w-11 items-center justify-center rounded-full bg-bordeaux text-accent-foreground">
-          <WineGlass className="h-5 w-5" aria-hidden="true" strokeWidth={1.6} />
-        </span>
-        <span className="eyebrow text-bordeaux">{t.wines.types[wine.type]}</span>
-        <h3 className="text-3xl text-foreground">{wine.name}</h3>
-        <p className="text-sm text-muted-foreground">{wine.subtitle[lang]}</p>
-        <span className="mt-2 font-serif text-sm italic text-vine">— {num(index)}</span>
-      </div>
-    </article>
-  );
-}
-
-/* 6 — Cartellino bordeaux */
-function EtichettaCard({ wine, index }: CardProps) {
+/* 8 — Cerchio: bottiglia davanti a un cerchio beige tenue */
+function CerchioCard({ wine }: CardProps) {
   const { lang } = useLanguage();
   return (
-    <article className={cn(base, "bg-bordeaux text-accent-foreground shadow-soft")}>
-      <span className="absolute -right-16 -top-16 h-56 w-56 rounded-full border border-accent-foreground/15" aria-hidden="true" />
-      <span className="absolute -right-5 -top-5 h-32 w-32 rounded-full border border-accent-foreground/15" aria-hidden="true" />
-      <div className="absolute inset-x-6 top-6 flex items-center justify-between">
-        <TypeTag wine={wine} className="text-accent-foreground/85" />
-        <span className="font-serif text-lg italic text-mustard">N° {num(index)}</span>
+    <article className={cn(base, "flex flex-col items-center border border-border/60 bg-offwhite px-6 pb-7 pt-8 text-center shadow-soft")}>
+      <div className="relative flex min-h-0 w-full flex-1 items-center justify-center">
+        <span className="absolute aspect-square w-[70%] max-w-[13rem] rounded-full bg-beige/50" aria-hidden="true" />
+        <Bottle wine={wine} className="relative h-full" />
       </div>
-      <Bottle
-        wine={wine}
-        className="absolute inset-x-0 bottom-36 top-16"
-        imgClassName="drop-shadow-[0_18px_22px_oklch(0.15_0.05_15_/_0.55)]"
-      />
-      {/* cartellino appeso */}
-      <div className="absolute bottom-6 left-1/2 w-[80%] -translate-x-1/2 -rotate-2 rounded-lg bg-offwhite px-5 pb-4 pt-6 text-center text-anthracite shadow-lift transition-transform duration-500 md:group-hover:rotate-0">
-        <span className="absolute left-1/2 top-2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border border-bordeaux/50 bg-bordeaux-soft" aria-hidden="true" />
-        <h3 className="text-[1.9rem] leading-none text-bordeaux">{wine.name}</h3>
-        <p className="mt-1.5 text-[0.66rem] uppercase tracking-[0.16em] text-muted-foreground">{wine.subtitle[lang]}</p>
-      </div>
-    </article>
-  );
-}
-
-/* 7 — Naturale artigianale */
-function ArtigianaleCard({ wine, index }: CardProps) {
-  const { lang } = useLanguage();
-  return (
-    <article className={cn(base, "bg-paper-texture flex flex-col p-6 text-ink shadow-soft")}>
-      <span className="pointer-events-none absolute inset-3 rounded-xl border border-dashed border-ink/35" aria-hidden="true" />
-      <span
-        className="absolute right-6 top-6 flex h-14 w-14 rotate-12 items-center justify-center rounded-full border-2 border-bordeaux/60 font-serif text-sm font-semibold text-bordeaux/80"
-        aria-hidden="true"
-      >
-        N°{num(index)}
-      </span>
-      <TypeTag wine={wine} className="relative" />
-      <Bottle wine={wine} className="relative mt-3 h-full flex-1" imgClassName="sepia-[.12]" />
-      <div className="relative mt-4 border-t border-ink/30 pt-4 text-center">
-        <h3 className="text-2xl font-semibold uppercase tracking-[0.2em]">{wine.name}</h3>
-        <p className="mt-1 font-serif text-base italic text-ink/80">{wine.subtitle[lang]}</p>
-      </div>
-    </article>
-  );
-}
-
-/* 8 — Editoriale */
-function EditorialeCard({ wine, index }: CardProps) {
-  const { lang } = useLanguage();
-  return (
-    <article className={cn(base, "bg-editorial text-amber-deep shadow-soft")}>
-      <span
-        className="absolute right-3.5 top-1/2 -translate-y-1/2 whitespace-nowrap text-[0.65rem] font-semibold uppercase tracking-[0.3em] text-amber-deep/70 [writing-mode:vertical-rl]"
-        aria-hidden="true"
-      >
-        Vol. {num(index)} — {wine.name}
-      </span>
-      <h3 className="relative z-0 px-5 pt-6 font-serif text-[4.2rem] italic leading-[0.85] tracking-tight [overflow-wrap:anywhere]">
-        {wine.name}
-      </h3>
-      <span className="absolute left-5 top-[48%] h-24 w-24 rounded-full bg-amber/60" aria-hidden="true" />
-      <Bottle
-        wine={wine}
-        className="absolute bottom-6 right-10 top-20 z-10 w-[44%]"
-        imgClassName="drop-shadow-[0_18px_20px_oklch(0.35_0.08_55_/_0.35)]"
-      />
-      <div className="absolute bottom-6 left-5 z-20 max-w-[44%]">
-        <TypeTag wine={wine} />
-        <p className="mt-2 font-serif text-base leading-snug">{wine.subtitle[lang]}</p>
-      </div>
+      <TypeTag wine={wine} className="mt-5 text-muted-foreground" />
+      <h3 className="mt-1.5 text-3xl text-foreground">{wine.name}</h3>
+      <p className="mt-0.5 text-sm text-muted-foreground">{wine.subtitle[lang]}</p>
     </article>
   );
 }
@@ -228,12 +183,12 @@ function EditorialeCard({ wine, index }: CardProps) {
 const variants: Record<Wine["cardStyle"], (p: CardProps) => ReactNode> = {
   minimal: MinimalCard,
   catalogo: CatalogoCard,
-  luminoso: LuminosoCard,
-  arco: ArcoCard,
-  orizzontale: OrizzontaleCard,
-  etichetta: EtichettaCard,
-  artigianale: ArtigianaleCard,
-  editoriale: EditorialeCard,
+  lino: LinoCard,
+  salvia: SalviaCard,
+  sabbia: SabbiaCard,
+  nicchia: NicchiaCard,
+  pietra: PietraCard,
+  cerchio: CerchioCard,
 };
 
 export function WineCard(props: CardProps) {

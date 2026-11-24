@@ -9,12 +9,12 @@ import { WineCard } from "./WineCard";
 const styleNames: Record<CardStyle, string> = {
   minimal: "Minimal elegante",
   catalogo: "Catalogo premium",
-  luminoso: "Luminoso contemporaneo",
-  arco: "Arco in vigna",
-  orizzontale: "Moderno orizzontale",
-  etichetta: "Cartellino bordeaux",
-  artigianale: "Naturale artigianale",
-  editoriale: "Editoriale",
+  lino: "Lino",
+  salvia: "Salvia",
+  sabbia: "Sabbia",
+  nicchia: "Nicchia",
+  pietra: "Pietra",
+  cerchio: "Cerchio",
 };
 const SHOW_STYLE_CAPTIONS = true;
 

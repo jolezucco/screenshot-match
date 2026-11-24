@@ -155,15 +155,6 @@
     oklch(0.22 0.04 140 / 45%) 55%,
     oklch(0.2 0.035 140 / 80%) 100%
   );
-  --gradient-glass-card: radial-gradient(
-      circle at 20% 15%,
-      oklch(0.95 0.035 140 / 90%) 0%,
-      transparent 55%
-    ),
-    radial-gradient(circle at 85% 80%, oklch(0.93 0.04 85 / 95%) 0%, transparent 55%),
-    linear-gradient(160deg, oklch(0.98 0.01 120), oklch(0.95 0.02 90));
-  --gradient-editorial: linear-gradient(165deg, var(--amber-soft) 0%, oklch(0.84 0.09 70) 100%);
-  --gradient-horizontal: linear-gradient(180deg, var(--beige), var(--cream));
 }
 
 @layer base {
@@ -245,29 +236,6 @@
 @utility bg-contact-overlay {
   background-image: var(--gradient-contact);
 }
-@utility bg-glass-card {
-  background-image: var(--gradient-glass-card);
-}
-@utility bg-editorial {
-  background-image: var(--gradient-editorial);
-}
-@utility bg-horizontal-card {
-  background-image: var(--gradient-horizontal);
-}
-
-/* Texture carta naturale (card artigianale) — rumore SVG leggerissimo */
-@utility bg-paper-texture {
-  background-color: var(--paper);
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.3 0 0 0 0 0.2 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
-    radial-gradient(circle at 30% 20%, oklch(0.95 0.025 85 / 70%), transparent 60%);
-}
-
-/* Riflesso morbido sotto la bottiglia (card luminosa) */
-@utility bottle-reflection {
-  -webkit-box-reflect: below 2px linear-gradient(transparent 70%, oklch(1 0 0 / 22%));
-}
-
 /* Animazione d'ingresso allo scroll (vedi src/components/site/Reveal.tsx) */
 @utility reveal {
   @media (prefers-reduced-motion: no-preference) {

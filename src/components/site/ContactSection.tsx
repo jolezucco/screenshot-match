@@ -43,27 +43,26 @@ export function ContactSection() {
 
         <Reveal delay={100} className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-3xl bg-offwhite shadow-lift md:mt-14">
           <div className="grid lg:grid-cols-[1fr_1.05fr]">
-            <ul className="divide-y divide-border/80 p-2 sm:p-4">
+            {/* INFORMAZIONI DI CONTATTO — valori in src/config/site.ts */}
+            <ul className="grid gap-3 p-4 sm:grid-cols-2 sm:p-6 lg:grid-cols-1 lg:content-center lg:p-8">
               {items.map((item) => (
                 <li key={item.label}>
                   <a
                     href={item.href}
                     {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    className="group flex min-h-[4.75rem] items-center gap-4 rounded-2xl px-3 py-3 transition-colors duration-300 hover:bg-cream"
+                    className="group flex h-full min-h-[4.5rem] items-center gap-4 rounded-xl border border-border/70 bg-card px-4 py-3.5 transition-all duration-300 hover:border-vine/40 hover:bg-cream active:scale-[0.99]"
                   >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-mustard/25 text-vine-deep transition-colors duration-300 group-hover:bg-mustard">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-vine-deep text-mustard transition-colors duration-300 group-hover:bg-vine">
                       {item.icon}
                     </span>
                     <span className="min-w-0 flex-1">
-                      <span className="block text-[0.66rem] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                        {item.label}
-                      </span>
-                      <span className="mt-0.5 block break-words font-serif text-xl leading-snug text-anthracite md:text-[1.4rem]">
+                      <span className="block text-xs font-medium text-muted-foreground">{item.label}</span>
+                      <span className="mt-0.5 block break-words text-[0.97rem] font-semibold leading-snug text-anthracite">
                         {item.value}
                       </span>
                     </span>
                     <ArrowUpRight
-                      className="h-5 w-5 shrink-0 text-muted-foreground transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-bordeaux"
+                      className="h-4 w-4 shrink-0 text-muted-foreground/60 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-vine"
                       aria-hidden="true"
                     />
                   </a>
