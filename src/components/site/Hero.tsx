@@ -24,7 +24,7 @@ export function Hero() {
       </picture>
       <div className="bg-hero-overlay absolute inset-0 -z-10" aria-hidden="true" />
 
-      <div className="container-site pb-20 pt-24 text-on-photo md:pb-28">
+      <div className="container-site pb-32 pt-24 text-on-photo md:pb-28">
         <p className="eyebrow animate-in fade-in slide-in-from-bottom-2 text-on-photo/85 duration-700">
           {t.hero.eyebrow}
         </p>
@@ -43,13 +43,17 @@ export function Hero() {
         </a>
       </div>
 
+      {/* Indicatore di scorrimento: una linea sottile con una luce che scende */}
       <a
         href="#azienda"
-        className="absolute bottom-5 left-1/2 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full text-on-photo/80 hover:text-on-photo"
+        className="group absolute bottom-0 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 px-4 pb-4 text-on-photo/75 hover:text-on-photo"
         aria-label={t.hero.scrollHint}
       >
-        <span className="flex h-9 w-6 justify-center rounded-full border border-on-photo/60 pt-1.5" aria-hidden="true">
-          <span className="h-2 w-0.5 rounded-full bg-on-photo animate-scroll-hint" />
+        <span className="text-[0.6rem] font-semibold uppercase tracking-[0.3em]" aria-hidden="true">
+          {t.hero.scrollLabel}
+        </span>
+        <span className="relative block h-12 w-px overflow-hidden bg-on-photo/25" aria-hidden="true">
+          <span className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-transparent via-mustard to-on-photo animate-scroll-line" />
         </span>
       </a>
     </section>

@@ -107,29 +107,23 @@ function LuminosoCard({ wine }: CardProps) {
   );
 }
 
-/* 4 — Fotografico */
-function FotograficoCard({ wine }: CardProps) {
+/* 4 — Arco in vigna */
+function ArcoCard({ wine }: CardProps) {
   const { lang } = useLanguage();
   return (
-    <article className={cn(base, "shadow-soft")}>
-      <img
-        src="/images/texture-vigna.webp"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 md:group-hover:scale-105"
-      />
-      <div className="bg-photo-card-overlay absolute inset-0" aria-hidden="true" />
-      <Bottle
-        wine={wine}
-        className="absolute inset-x-0 top-6 h-[66%]"
-        imgClassName="drop-shadow-[0_24px_24px_oklch(0.1_0.02_140_/_0.55)]"
-      />
-      <div className="absolute inset-x-0 bottom-0 p-6 text-on-photo">
-        <TypeTag wine={wine} className="text-on-photo/85" />
-        <h3 className="mt-2 text-3xl">{wine.name}</h3>
-        <p className="mt-0.5 text-sm text-on-photo/80">{wine.subtitle[lang]}</p>
+    <article className={cn(base, "flex flex-col items-center bg-sage-soft px-5 pb-6 pt-5 text-center shadow-soft")}>
+      <div className="relative flex min-h-0 w-full flex-1 items-end justify-center overflow-hidden rounded-t-full border border-vine/25 bg-offwhite pt-12">
+        <span className="absolute inset-x-0 bottom-0 h-1/4 bg-mustard/20" aria-hidden="true" />
+        <span className="absolute left-1/2 top-5 h-2 w-2 -translate-x-1/2 rounded-full bg-mustard" aria-hidden="true" />
+        <Bottle
+          wine={wine}
+          className="relative h-[92%] pb-3"
+          imgClassName="drop-shadow-[0_12px_12px_oklch(0.3_0.04_140_/_0.2)]"
+        />
       </div>
+      <TypeTag wine={wine} className="mt-4 text-vine" />
+      <h3 className="mt-1.5 text-3xl text-vine-deep">{wine.name}</h3>
+      <p className="mt-0.5 text-sm text-muted-foreground">{wine.subtitle[lang]}</p>
     </article>
   );
 }
@@ -155,23 +149,27 @@ function OrizzontaleCard({ wine, index }: CardProps) {
   );
 }
 
-/* 6 — Luxury scuro */
-function LuxuryCard({ wine }: CardProps) {
+/* 6 — Cartellino bordeaux */
+function EtichettaCard({ wine, index }: CardProps) {
   const { lang } = useLanguage();
   return (
-    <article className={cn(base, "flex flex-col bg-luxe p-6 text-luxe-foreground shadow-soft")}>
-      <div className="bg-luxe-spot absolute inset-0 transition-opacity duration-700 md:group-hover:opacity-90" aria-hidden="true" />
-      <span className="pointer-events-none absolute inset-3 rounded-xl border border-gold/25" aria-hidden="true" />
-      <TypeTag wine={wine} className="relative self-center text-gold" />
+    <article className={cn(base, "bg-bordeaux text-accent-foreground shadow-soft")}>
+      <span className="absolute -right-16 -top-16 h-56 w-56 rounded-full border border-accent-foreground/15" aria-hidden="true" />
+      <span className="absolute -right-5 -top-5 h-32 w-32 rounded-full border border-accent-foreground/15" aria-hidden="true" />
+      <div className="absolute inset-x-6 top-6 flex items-center justify-between">
+        <TypeTag wine={wine} className="text-accent-foreground/85" />
+        <span className="font-serif text-lg italic text-mustard">N° {num(index)}</span>
+      </div>
       <Bottle
         wine={wine}
-        className="relative mt-3 h-full flex-1"
-        imgClassName="drop-shadow-[0_0_28px_oklch(0.8_0.075_82_/_0.22)]"
+        className="absolute inset-x-0 bottom-36 top-16"
+        imgClassName="drop-shadow-[0_18px_22px_oklch(0.15_0.05_15_/_0.55)]"
       />
-      <div className="relative mt-4 text-center">
-        <h3 className="text-3xl uppercase tracking-[0.12em] text-gold">{wine.name}</h3>
-        <span className="mx-auto mt-2 block h-px w-12 bg-gold/60" aria-hidden="true" />
-        <p className="mt-2 text-sm text-luxe-foreground/75">{wine.subtitle[lang]}</p>
+      {/* cartellino appeso */}
+      <div className="absolute bottom-6 left-1/2 w-[80%] -translate-x-1/2 -rotate-2 rounded-lg bg-offwhite px-5 pb-4 pt-6 text-center text-anthracite shadow-lift transition-transform duration-500 md:group-hover:rotate-0">
+        <span className="absolute left-1/2 top-2 h-2.5 w-2.5 -translate-x-1/2 rounded-full border border-bordeaux/50 bg-bordeaux-soft" aria-hidden="true" />
+        <h3 className="text-[1.9rem] leading-none text-bordeaux">{wine.name}</h3>
+        <p className="mt-1.5 text-[0.66rem] uppercase tracking-[0.16em] text-muted-foreground">{wine.subtitle[lang]}</p>
       </div>
     </article>
   );
@@ -231,9 +229,9 @@ const variants: Record<Wine["cardStyle"], (p: CardProps) => ReactNode> = {
   minimal: MinimalCard,
   catalogo: CatalogoCard,
   luminoso: LuminosoCard,
-  fotografico: FotograficoCard,
+  arco: ArcoCard,
   orizzontale: OrizzontaleCard,
-  luxury: LuxuryCard,
+  etichetta: EtichettaCard,
   artigianale: ArtigianaleCard,
   editoriale: EditorialeCard,
 };

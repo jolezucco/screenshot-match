@@ -16,7 +16,6 @@ export function CatalogDownload() {
         </span>
         <div className="flex-1">
           <h3 className="text-3xl">{t.catalog.title}</h3>
-          <p className="mt-2 text-muted-foreground">{t.catalog.text}</p>
         </div>
         {/* CATALOGO PDF — percorso in src/config/site.ts */}
         <a

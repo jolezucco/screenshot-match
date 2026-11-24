@@ -10,9 +10,9 @@ const styleNames: Record<CardStyle, string> = {
   minimal: "Minimal elegante",
   catalogo: "Catalogo premium",
   luminoso: "Luminoso contemporaneo",
-  fotografico: "Fotografico",
+  arco: "Arco in vigna",
   orizzontale: "Moderno orizzontale",
-  luxury: "Luxury scuro",
+  etichetta: "Cartellino bordeaux",
   artigianale: "Naturale artigianale",
   editoriale: "Editoriale",
 };
@@ -29,7 +29,6 @@ export function WineSelection() {
           <h2 id="wines-title" className="mt-4 text-4xl md:text-5xl">
             {t.wines.title}
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">{t.wines.subtitle}</p>
         </Reveal>
 
         <ul className="mt-12 grid grid-cols-1 gap-x-6 gap-y-10 md:mt-16 md:grid-cols-2 xl:grid-cols-4">

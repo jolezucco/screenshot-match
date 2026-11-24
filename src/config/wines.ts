@@ -19,9 +19,9 @@ export type CardStyle =
   | "minimal"
   | "catalogo"
   | "luminoso"
-  | "fotografico"
+  | "arco"
   | "orizzontale"
-  | "luxury"
+  | "etichetta"
   | "artigianale"
   | "editoriale";
 
@@ -79,7 +79,7 @@ export const wines: Wine[] = [
     type: "bianco",
     image: bottle("bottiglia-bianco.webp"),
     alt: { it: "Bottiglia di Carciofino, vino bianco", en: "Bottle of Carciofino, white wine" },
-    cardStyle: "fotografico",
+    cardStyle: "arco",
   },
   {
     id: "robi",
@@ -97,7 +97,7 @@ export const wines: Wine[] = [
     type: "rosso",
     image: bottle("bottiglia-rosso.webp"),
     alt: { it: "Bottiglia di Generale, vino rosso", en: "Bottle of Generale, red wine" },
-    cardStyle: "luxury",
+    cardStyle: "etichetta",
   },
   {
     id: "punto-fermo",

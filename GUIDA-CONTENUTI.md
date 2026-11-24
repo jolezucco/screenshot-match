@@ -2,9 +2,9 @@
 
 | Cosa | Dove |
 | --- | --- |
-| Logo Carcioffi (header) | `public/images/loghi/logo-carcioffi.svg` |
-| Logo Carcioffi chiaro (footer) | `public/images/loghi/logo-carcioffi-chiaro.svg` |
-| Logo Comoda Bike | `public/images/loghi/logo-comoda-bike.svg` |
+| Logo Carcioffi (header e footer) | `public/images/loghi/logo-carcioffi.png` |
+| Logo Comoda Bike | `public/images/loghi/logo-comoda-bike.png` |
+| Link del logo Comoda Bike (ora vuoto) | `src/config/site.ts` → `logoSecondaryUrl` |
 | Immagine della vigna | `public/images/hero-vigna.webp` (desktop) e `public/images/hero-vigna-mobile.webp` (smartphone, verticale) |
 | Testo fornito da Ale | `src/i18n/translations.ts` → `about.title` e `about.body` (IT ed EN) |
 | Immagini delle 8 bottiglie | `public/images/bottiglie/` + percorso `image` di ogni vino in `src/config/wines.ts` |

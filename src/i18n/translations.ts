@@ -12,12 +12,14 @@ export const translations = {
   it: {
     langLabel: "Seleziona la lingua",
     tagline: "Vendita vini",
+    secondaryLogoLabel: "Comoda Bike",
     hero: {
       eyebrow: "Carcioffi · Vendita vini",
       title: "Vini autentici del territorio",
       cta: "Scopri i nostri vini",
       scrollHint: "Scorri verso il basso",
-      imageAlt: "Filari di vigna sulle colline al tramonto",
+      scrollLabel: "Scorri",
+      imageAlt: "Filari di vigna sulle colline, con la casa dell’azienda sullo sfondo",
     },
     about: {
       eyebrow: "La nostra storia",
@@ -29,13 +31,11 @@ export const translations = {
     wines: {
       eyebrow: "I vini",
       title: "La nostra selezione",
-      subtitle: "Otto vini, otto espressioni del nostro territorio.",
       types: { rosso: "Rosso", bianco: "Bianco", rosato: "Rosato", passito: "Passito" },
       styleNote: "Proposta stile",
     },
     catalog: {
       title: "Il catalogo completo",
-      text: "Schede, abbinamenti e annate di tutti i nostri vini, in un unico documento.",
       cta: "Scarica il catalogo PDF",
       meta: "PDF",
     },
@@ -49,7 +49,7 @@ export const translations = {
       address: "Indirizzo",
       openMaps: "Apri in Google Maps",
       mapTitle: "Mappa con la posizione dell’azienda",
-      imageAlt: "Cortile dell’azienda agricola con botti di legno al tramonto",
+      imageAlt: "Grappoli di uva nera tra le foglie della vigna",
     },
     footer: {
       rights: "Vendita Vini. Tutti i diritti riservati.",
@@ -66,12 +66,14 @@ export const translations = {
   en: {
     langLabel: "Select language",
     tagline: "Wine shop",
+    secondaryLogoLabel: "Comoda Bike",
     hero: {
       eyebrow: "Carcioffi · Wine shop",
       title: "Authentic wines from our land",
       cta: "Discover our wines",
       scrollHint: "Scroll down",
-      imageAlt: "Vineyard rows on the hills at sunset",
+      scrollLabel: "Scroll",
+      imageAlt: "Vineyard rows on the hills, with the estate house in the background",
     },
     about: {
       eyebrow: "Our story",
@@ -81,13 +83,11 @@ export const translations = {
     wines: {
       eyebrow: "The wines",
       title: "Our selection",
-      subtitle: "Eight wines, eight expressions of our land.",
       types: { rosso: "Red", bianco: "White", rosato: "Rosé", passito: "Passito" },
       styleNote: "Style option",
     },
     catalog: {
       title: "The full catalogue",
-      text: "Tasting notes, pairings and vintages of all our wines, in a single document.",
       cta: "Download the PDF catalogue",
       meta: "PDF",
     },
@@ -101,7 +101,7 @@ export const translations = {
       address: "Address",
       openMaps: "Open in Google Maps",
       mapTitle: "Map showing the estate location",
-      imageAlt: "Farm courtyard with wooden barrels at sunset",
+      imageAlt: "Bunches of black grapes among the vine leaves",
     },
     footer: {
       rights: "Vendita Vini. All rights reserved.",

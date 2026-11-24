@@ -10,13 +10,13 @@
 export const site = {
   brandName: "Carcioffi",
 
-  /** LOGO CARCIOFFI — sostituisci public/images/loghi/logo-carcioffi.svg (header) */
-  logoMain: "/images/loghi/logo-carcioffi.svg",
-  /** LOGO CARCIOFFI versione chiara — sostituisci public/images/loghi/logo-carcioffi-chiaro.svg (footer) */
-  logoMainOnDark: "/images/loghi/logo-carcioffi-chiaro.svg",
-  /** LOGO COMODA BIKE — sostituisci public/images/loghi/logo-comoda-bike.svg */
-  logoSecondary: "/images/loghi/logo-comoda-bike.svg",
-  /** Link facoltativo del logo Comoda Bike (lascia "" per nessun link) */
+  /** LOGO CARCIOFFI (rotondo, header) — public/images/loghi/logo-carcioffi.png */
+  logoMain: "/images/loghi/logo-carcioffi.png",
+  /** LOGO CARCIOFFI nel footer (sfondo scuro) — stesso logo rotondo */
+  logoMainOnDark: "/images/loghi/logo-carcioffi.png",
+  /** LOGO COMODA BIKE — public/images/loghi/logo-comoda-bike.png */
+  logoSecondary: "/images/loghi/logo-comoda-bike.png",
+  /** LINK DEL LOGO COMODA BIKE — per ora vuoto: incolla qui il sito o il profilo Instagram (es. "https://...") */
   logoSecondaryUrl: "",
 
   /** IMMAGINE DELLA VIGNA (hero) — versione desktop e versione verticale per smartphone */
