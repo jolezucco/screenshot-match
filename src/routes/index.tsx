@@ -8,7 +8,6 @@ import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { WineSelection } from "@/components/site/WineSelection";
-import { LanguageProvider } from "@/i18n/LanguageContext";
 
 const TITLE = "Vendita Vini | Vini autentici del territorio";
 const DESCRIPTION =
@@ -33,19 +32,17 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <LanguageProvider>
-      <div id="top">
-        <Header />
-        <main>
-          <Hero />
-          <AboutSection />
-          <WineSelection />
-          <CustomLabels />
-          <ContactSection />
-        </main>
-        <Footer />
-        <WhatsAppButton />
-      </div>
-    </LanguageProvider>
+    <div id="top">
+      <Header />
+      <main>
+        <Hero />
+        <AboutSection />
+        <WineSelection />
+        <CustomLabels />
+        <ContactSection />
+      </main>
+      <Footer />
+      <WhatsAppButton />
+    </div>
   );
 }

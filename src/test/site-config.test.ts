@@ -31,4 +31,24 @@ describe("Wine selection", () => {
   it("uses the chosen 'lino' style for every card", () => {
     expect(wines.every((w) => w.cardStyle === "lino")).toBe(true);
   });
+
+  it("includes Robi detail data with grapes summing to 100% and sensory values in 1-4", () => {
+    const robi = wines.find((w) => w.id === "robi");
+    expect(robi?.detail).toBeDefined();
+    const detail = robi?.detail;
+    expect(detail?.servingTemp).toBe("10–12 °C");
+    expect(detail?.alcohol).toBe("12% vol");
+    expect(detail?.grapes.reduce((sum, g) => sum + g.percentage, 0)).toBe(100);
+    expect(detail?.sensory).toEqual({
+      sweetness: 4,
+      acidity: 1,
+      fruitiness: 3,
+      body: 3,
+      aroma: 3,
+    });
+    const wa = whatsappLink(detail?.whatsappMessage.it ?? "");
+    expect(new URL(wa).searchParams.get("text")).toBe(
+      "Ciao, vorrei ricevere informazioni su disponibilità, spedizione e prezzo del vino Robi.",
+    );
+  });
 });

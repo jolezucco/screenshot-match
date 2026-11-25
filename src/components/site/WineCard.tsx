@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Wine as WineGlass } from "lucide-react";
 import type { ReactNode } from "react";
 
@@ -193,5 +194,16 @@ const variants: Record<Wine["cardStyle"], (p: CardProps) => ReactNode> = {
 
 export function WineCard(props: CardProps) {
   const Variant = variants[props.wine.cardStyle];
+  if (props.wine.detail) {
+    return (
+      <Link
+        to="/vini/$wineId"
+        params={{ wineId: props.wine.id }}
+        className="block rounded-2xl focus-visible:outline-none"
+      >
+        <Variant {...props} />
+      </Link>
+    );
+  }
   return <Variant {...props} />;
 }

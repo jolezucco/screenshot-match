@@ -64,3 +64,23 @@ export function HillsOrnament(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+/** Icona minimale di un bicchiere di vino (predisposta per indicare la frizzantezza) */
+export function SparklingGlassIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M8 21h8" />
+      <path d="M12 15v6" />
+      <path d="M7 3h10l-1.1 7.2A4 4 0 0 1 12 15a4 4 0 0 1-3.9-4.8L7 3Z" />
+      <path d="M7.6 7.5h8.8" strokeOpacity="0.45" />
+    </svg>
+  );
+}

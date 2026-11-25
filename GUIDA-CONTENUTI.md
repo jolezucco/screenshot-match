@@ -13,6 +13,7 @@
 | Testi sezione etichette personalizzate | `src/i18n/translations.ts` → `labels` (IT ed EN) |
 | Foto di sfondo dei contatti | `public/images/contatti-sfondo.webp` |
 | Catalogo PDF | `public/catalogo/catalogo-vini.pdf` |
+| Scheda tecnica PDF di Robi | `public/schede/scheda-robi.pdf` (e `techSheetPdf` in `src/config/wines.ts`) |
 | Numero WhatsApp | `src/config/site.ts` → `whatsappNumber` e `whatsappDisplay` |
 | Email | `src/config/site.ts` → `email` |
 | Instagram | `src/config/site.ts` → `instagramHandle` e `instagramUrl` |

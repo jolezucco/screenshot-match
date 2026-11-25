@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useEffect, useState, type MouseEvent } from "react";
 
 import { site } from "@/config/site";
@@ -39,7 +40,7 @@ export function Header() {
         )}
       >
         {/* LOGO CARCIOFFI + "Vendita vini" — logo in src/config/site.ts */}
-        <a href="#top" className="flex min-w-0 items-center gap-2 md:gap-3.5" aria-label={`${site.brandName} — ${t.tagline}`}>
+        <Link to="/" className="flex min-w-0 items-center gap-2 md:gap-3.5" aria-label={`${site.brandName} — ${t.tagline}`}>
           <img
             src={site.logoMain}
             alt=""
@@ -59,7 +60,7 @@ export function Header() {
               {t.tagline}
             </span>
           </span>
-        </a>
+        </Link>
 
         <div className="flex shrink-0 items-center gap-2 min-[380px]:gap-3 md:gap-5">
           {/* LOGO COMODA BIKE — immagine cliccabile, link in src/config/site.ts */}
