@@ -43,7 +43,7 @@ export const translations = {
       eyebrow: "Etichette personalizzate",
       title: "Un vino con la tua etichetta",
       body: "Per matrimoni, battesimi, anniversari e ricorrenze speciali realizziamo etichette personalizzate con nomi, date e dediche: un regalo originale che racconta il vostro momento.",
-      imageAlt: "Bottiglie di vino con etichette personalizzate per eventi speciali",
+      imageAlt: "Collage di etichette d'epoca di vini e spumanti",
     },
     contact: {
       eyebrow: "Contatti",
@@ -86,7 +86,8 @@ export const translations = {
       },
       pairingsTitle: "Abbinamenti",
       buyTitle: "Come acquistare",
-      buyText: "Per conoscere disponibilità, modalità di spedizione e prezzi, contattami direttamente su WhatsApp.",
+      buyText:
+        "Per conoscere disponibilità, modalità di spedizione e prezzi, contattami direttamente su WhatsApp.",
       buyCta: "Contattami su WhatsApp",
       downloadSheet: "Scarica la scheda del vino",
     },
@@ -123,7 +124,7 @@ export const translations = {
       eyebrow: "Custom labels",
       title: "A wine with your own label",
       body: "For weddings, christenings, anniversaries and special occasions we create personalised labels with names, dates and dedications: an original gift that tells your story.",
-      imageAlt: "Wine bottles with custom labels for special events",
+      imageAlt: "Collage of vintage wine and sparkling wine labels",
     },
     contact: {
       eyebrow: "Contact",
@@ -166,7 +167,8 @@ export const translations = {
       },
       pairingsTitle: "Pairings",
       buyTitle: "How to buy",
-      buyText: "To find out about availability, shipping and prices, contact me directly on WhatsApp.",
+      buyText:
+        "To find out about availability, shipping and prices, contact me directly on WhatsApp.",
       buyCta: "Contact me on WhatsApp",
       downloadSheet: "Download the wine sheet",
     },

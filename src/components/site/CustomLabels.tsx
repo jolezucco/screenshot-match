@@ -4,8 +4,9 @@ import { Reveal } from "./Reveal";
 
 /**
  * Sezione "Etichette personalizzate" — sotto il catalogo.
- * FOTO SEGNAPOSTO: sostituisci public/images/etichette/etichette-personalizzate.webp
- * con la foto dei tipi di etichette (stesso nome, nessuna modifica al codice).
+ * FOTO: collage di etichette d'epoca (ritagliato in 4:5 per la card).
+ * Per cambiarla basta sostituire public/images/etichette/etichette-personalizzate.webp
+ * con un'altra immagine dello stesso formato.
  */
 const LABELS_IMAGE = "/images/etichette/etichette-personalizzate.webp";
 
@@ -31,8 +32,8 @@ export function CustomLabels() {
               alt={t.labels.imageAlt}
               loading="lazy"
               decoding="async"
-              width={1200}
-              height={1800}
+              width={495}
+              height={619}
               className="aspect-[4/5] w-full rounded-2xl object-cover shadow-soft md:mx-auto md:max-w-sm"
             />
           </Reveal>
