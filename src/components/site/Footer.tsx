@@ -10,9 +10,9 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-vine-deep pb-28 pt-14 text-cream md:pb-12">
+    <footer className="relative bg-vine-deep pb-[calc(3rem+env(safe-area-inset-bottom))] pt-10 text-cream md:pb-12 md:pt-14">
       <span className="absolute inset-x-0 top-0 h-1 bg-mustard" aria-hidden="true" />
-      <div className="container-site grid gap-10 md:grid-cols-3">
+      <div className="container-site grid gap-8 md:grid-cols-3 md:gap-10">
         <div className="flex items-center gap-4 md:items-start">
           <img src={site.logoMainOnDark} alt={site.brandName} width={320} height={320} loading="lazy" className="h-16 w-16 shrink-0" />
           <div>
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="container-site mt-12 border-t border-cream/15 pt-6 text-xs text-cream/60">
+      <div className="container-site mt-8 border-t border-cream/15 pt-5 pr-20 text-xs text-cream/60 md:mt-12 md:pr-0 md:pt-6">
         <p suppressHydrationWarning>
           © {year} {t.footer.rights}
         </p>
