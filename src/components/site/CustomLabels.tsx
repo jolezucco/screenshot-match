@@ -33,7 +33,7 @@ export function CustomLabels() {
               decoding="async"
               width={1200}
               height={1800}
-              className="aspect-[4/5] w-full rounded-2xl object-cover shadow-soft"
+              className="aspect-[4/5] w-full rounded-2xl object-cover shadow-soft md:mx-auto md:max-w-sm"
             />
           </Reveal>
         </div>
