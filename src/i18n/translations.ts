@@ -11,7 +11,7 @@ export type Lang = "it" | "en";
 export const translations = {
   it: {
     langLabel: "Seleziona la lingua",
-    tagline: "Vendita vini",
+    tagline: "Vini e spumanti",
     secondaryLogoLabel: "Comoda Bike",
     hero: {
       eyebrow: "Carcioffi · Vendita vini",
@@ -39,6 +39,12 @@ export const translations = {
       cta: "Scarica il catalogo PDF",
       meta: "PDF",
     },
+    labels: {
+      eyebrow: "Etichette personalizzate",
+      title: "Un vino con la tua etichetta",
+      body: "Per matrimoni, battesimi, anniversari e ricorrenze speciali realizziamo etichette personalizzate con nomi, date e dediche: un regalo originale che racconta il vostro momento.",
+      imageAlt: "Bottiglie di vino con etichette personalizzate per eventi speciali",
+    },
     contact: {
       eyebrow: "Contatti",
       title: "Vieni a trovarci",
@@ -65,7 +71,7 @@ export const translations = {
   },
   en: {
     langLabel: "Select language",
-    tagline: "Wine shop",
+    tagline: "Wines and sparkling wines",
     secondaryLogoLabel: "Comoda Bike",
     hero: {
       eyebrow: "Carcioffi · Wine shop",
@@ -90,6 +96,12 @@ export const translations = {
       title: "The full catalogue",
       cta: "Download the PDF catalogue",
       meta: "PDF",
+    },
+    labels: {
+      eyebrow: "Custom labels",
+      title: "A wine with your own label",
+      body: "For weddings, christenings, anniversaries and special occasions we create personalised labels with names, dates and dedications: an original gift that tells your story.",
+      imageAlt: "Wine bottles with custom labels for special events",
     },
     contact: {
       eyebrow: "Contact",

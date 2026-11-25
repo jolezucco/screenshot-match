@@ -28,7 +28,7 @@ describe("Wine selection", () => {
     ]);
   });
 
-  it("gives each of the eight cards a different style", () => {
-    expect(new Set(wines.map((w) => w.cardStyle)).size).toBe(8);
+  it("uses the chosen 'lino' style for every card", () => {
+    expect(wines.every((w) => w.cardStyle === "lino")).toBe(true);
   });
 });

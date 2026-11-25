@@ -9,6 +9,8 @@
 | Testo fornito da Ale | `src/i18n/translations.ts` → `about.title` e `about.body` (IT ed EN) |
 | Immagini delle 8 bottiglie | `public/images/bottiglie/` + percorso `image` di ogni vino in `src/config/wines.ts` |
 | Nomi/tipologie dei vini | `src/config/wines.ts` |
+| Foto dei tipi di etichette (sezione etichette personalizzate) | `public/images/etichette/etichette-personalizzate.webp` |
+| Testi sezione etichette personalizzate | `src/i18n/translations.ts` → `labels` (IT ed EN) |
 | Foto di sfondo dei contatti | `public/images/contatti-sfondo.webp` |
 | Catalogo PDF | `public/catalogo/catalogo-vini.pdf` |
 | Numero WhatsApp | `src/config/site.ts` → `whatsappNumber` e `whatsappDisplay` |

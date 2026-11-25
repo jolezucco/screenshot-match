@@ -52,7 +52,7 @@ export const wines: Wine[] = [
     type: "rosso",
     image: bottle("bottiglia-rosso.webp"),
     alt: { it: "Bottiglia di Prima Luna, vino rosso", en: "Bottle of Prima Luna, red wine" },
-    cardStyle: "minimal",
+    cardStyle: "lino",
   },
   {
     id: "corla",
@@ -61,7 +61,7 @@ export const wines: Wine[] = [
     type: "rosso",
     image: bottle("bottiglia-rosso.webp"),
     alt: { it: "Bottiglia di Corla, vino rosso", en: "Bottle of Corla, red wine" },
-    cardStyle: "catalogo",
+    cardStyle: "lino",
   },
   {
     id: "bianco-perla",
@@ -79,7 +79,7 @@ export const wines: Wine[] = [
     type: "bianco",
     image: bottle("bottiglia-bianco.webp"),
     alt: { it: "Bottiglia di Carciofino, vino bianco", en: "Bottle of Carciofino, white wine" },
-    cardStyle: "salvia",
+    cardStyle: "lino",
   },
   {
     id: "robi",
@@ -88,7 +88,7 @@ export const wines: Wine[] = [
     type: "rosato",
     image: bottle("bottiglia-rosato.webp"),
     alt: { it: "Bottiglia di Robi, vino rosato", en: "Bottle of Robi, rosé wine" },
-    cardStyle: "sabbia",
+    cardStyle: "lino",
   },
   {
     id: "generale",
@@ -97,7 +97,7 @@ export const wines: Wine[] = [
     type: "rosso",
     image: bottle("bottiglia-rosso.webp"),
     alt: { it: "Bottiglia di Generale, vino rosso", en: "Bottle of Generale, red wine" },
-    cardStyle: "nicchia",
+    cardStyle: "lino",
   },
   {
     id: "punto-fermo",
@@ -106,7 +106,7 @@ export const wines: Wine[] = [
     type: "bianco",
     image: bottle("bottiglia-bianco.webp"),
     alt: { it: "Bottiglia di Punto Fermo, vino bianco", en: "Bottle of Punto Fermo, white wine" },
-    cardStyle: "pietra",
+    cardStyle: "lino",
   },
   {
     id: "passito",
@@ -115,6 +115,6 @@ export const wines: Wine[] = [
     type: "passito",
     image: bottle("bottiglia-passito.webp"),
     alt: { it: "Bottiglia di Passito, vino passito", en: "Bottle of Passito, dessert wine" },
-    cardStyle: "cerchio",
+    cardStyle: "lino",
   },
 ];
